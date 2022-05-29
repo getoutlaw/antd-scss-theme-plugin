@@ -52,17 +52,12 @@ class AntdScssThemePlugin {
    */
   static themify(config) {
     const { loader, options = {} } = (typeof config === 'string') ? { loader: config } : config;
-    let overloadedLoader;
-    switch (loader) {
-      case 'sass-loader':
-        overloadedLoader = require.resolve('./antdSassLoader.js');
-        break;
-      case 'less-loader':
-        overloadedLoader = require.resolve('./antdLessLoader.js');
-        break;
-      default:
-        overloadedLoader = loader;
-        break;
+    let overloadedLoader = loader;
+
+    if (/sass-loader/g.test(loader)) {
+      overloadedLoader = require.resolve('./antdSassLoader.js');
+    } else if (/less-loader/g.test(loader)) {
+      overloadedLoader = require.resolve('./antdLessLoader.js');
     }
 
     return {
