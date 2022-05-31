@@ -81,16 +81,18 @@ export default function antdSassLoader(...args) {
   const callback = loaderContext.async();
   const options = this.getOptions();
 
-  const newLoaderContext = {};
+  const scssThemePath = getScssThemePath(options);
+  this.addDependency(scssThemePath);
 
   overloadSassLoaderOptions(options)
     .then((newOptions) => {
+      const newLoaderContext = {};
       delete newOptions.scssThemePath; // eslint-disable-line no-param-reassign
       newLoaderContext.query = newOptions;
       newLoaderContext.getOptions = () => newOptions;
 
-      const scssThemePath = getScssThemePath(options);
       const newContext = mergeRight(this, newLoaderContext);
+
       newContext.addDependency(scssThemePath);
       return sassLoader.call(newContext, ...args);
     })
