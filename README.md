@@ -14,18 +14,15 @@
 </h1>
 
 <p align="left">
-    <a href="https://circleci.com/gh/intoli/antd-scss-theme-plugin/tree/master">
-        <img src="https://img.shields.io/circleci/project/github/intoli/antd-scss-theme-plugin/master.svg"
-            alt="Build Status"></a>
-    <a href="https://github.com/intoli/antd-scss-theme-plugin/blob/master/LICENSE.md">
-        <img src="https://img.shields.io/npm/l/antd-scss-theme-plugin.svg"
+    <a href="https://github.com/igor-lemon/antd-scss-theme-plugin/blob/master/LICENSE.md">
+        <img src="https://img.shields.io/npm/l/@igor-lemon/antd-scss-theme-plugin.svg"
             alt="License"></a>
-    <a href="https://www.npmjs.com/package/antd-scss-theme-plugin">
-        <img src="https://img.shields.io/npm/v/antd-scss-theme-plugin.svg"
+    <a href="https://www.npmjs.com/package/@igor-lemon/antd-scss-theme-plugin">
+        <img src="https://img.shields.io/npm/v/@igor-lemon/antd-scss-theme-plugin.svg"
             alt="NPM Version"></a>
 </p>
 
-`antd-scss-theme-plugin` is a [Webpack plugin](https://webpack.js.org/concepts/plugins/) which allows you to effectively use [Ant Design](https://ant.design/) in a project with SCSS styling.
+`@igor-lemon/antd-scss-theme-plugin` is a [Webpack plugin](https://webpack.js.org/concepts/plugins/) which allows you to effectively use [Ant Design](https://ant.design/) in a project with SCSS styling.
 With it you can:
 
 1. Customize Ant Design by specifying theme variable overrides through a single `theme.scss` file.
@@ -40,7 +37,7 @@ With it you can:
 - [Installation](#installation) - Instructions about installing this Webpack plugin from `npm`.
 - [Configuration](#configuration)
     - [Step 1. Configure Ant Design to Use Less Stylesheets](#step-1-configure-ant-design-to-use-less-stylesheets) - Instructions for configuring `antd` to use Less instead of pre-compiled CSS.
-    - [Step 2. Use `antd-scss-theme-plugin` in Your Webpack Setup](#step-2-use-antd-scss-theme-plugin-in-your-webpack-setup) - Instructions for enabling this plugin.
+    - [Step 2. Use `@igor-lemon/antd-scss-theme-plugin` in Your Webpack Setup](#step-2-use-antd-scss-theme-plugin-in-your-webpack-setup) - Instructions for enabling this plugin.
 - [Usage](#usage)
     - [Customize Ant Design's Theme](#customize-ant-designs-theme) - How to specify theme variable overrides in SCSS.
     - [Use Ant Design's Customized Color and Theme Variables](#use-ant-designs-customized-color-and-theme-variables) - How to import (customized) theme variables in SCSS files throughout your project.
@@ -50,10 +47,10 @@ With it you can:
 
 ## Installation
 
-This plugin is published as [antd-scss-theme-plugin](https://www.npmjs.com/package/antd-scss-theme-plugin) on `npm`:
+This plugin is published as [@igor-lemon/antd-scss-theme-plugin](https://www.npmjs.com/package/@igor-lemon/antd-scss-theme-plugin) on `npm`:
 
 ```bash
-npm install --save-dev antd-scss-theme-plugin
+npm install --save-dev @igor-lemon/antd-scss-theme-plugin
 ```
 
 It extends the functionality of a `antd`, `less-loader` and `sass-loader` to accomplish its goals.
@@ -67,7 +64,7 @@ npm install --save-dev less-loader sass-loader
 
 ## Configuration
 
-To use `antd-scss-theme-plugin`, you need to configure Ant Design to use Less stylesheets when loading components, and to connect a few loaders with the plugin in your Webpack setup.
+To use `@igor-lemon/antd-scss-theme-plugin`, you need to configure Ant Design to use Less stylesheets when loading components, and to connect a few loaders with the plugin in your Webpack setup.
 You can find a fully configured project in the [example](example/) directory.
 
 
@@ -120,12 +117,12 @@ import { Button } from 'antd';
 So, in addition to enabling styling customizations, this has the potential to reduce the size of your Webpack bundle.
 
 
-### Step 2. Use `antd-scss-theme-plugin` in Your Webpack Setup
+### Step 2. Use `@igor-lemon/antd-scss-theme-plugin` in Your Webpack Setup
 
 First, initialize the plugin by passing your theme file's path to the plugin's constructor, and add the plugin to your Webpack config's `plugins` array:
 
 ```javascript
-import AntdScssThemePlugin from 'antd-scss-theme-plugin';
+import AntdScssThemePlugin from '@igor-lemon/antd-scss-theme-plugin';
 import path from 'path';
 
 const webpackConfig =  {
