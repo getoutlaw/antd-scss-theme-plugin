@@ -42,7 +42,7 @@
     "less": "^4.1.2",
     "loader-utils": "^2.0.2",
     "ramda": "^0.28.0",
-    "scss-to-json": "^2.0.0"
+    "scss-json": "^1.0.0"
   },
   "peerDependencies": {
     "antd": "^4.20.6",
@@ -78,7 +78,7 @@
     "jest": "^28.1.0",
     "less": "^4.1.2",
     "less-loader": "^11.0.0",
-    "node-sass": "^7.0.1",
+    "sass": "~1.49.10",
     "raw-loader": "^4.0.2",
     "rimraf": "^3.0.2",
     "sass-loader": "^13.0.0",

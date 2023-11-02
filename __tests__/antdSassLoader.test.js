@@ -1,6 +1,6 @@
 import path from 'path';
 
-import sass from 'node-sass';
+import sass from 'sass';
 import rimraf from 'rimraf';
 
 import { compileWebpack } from '../misc/testUtils';
